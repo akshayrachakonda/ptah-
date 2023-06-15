@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>PATH TO ₹</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body>
+    <header class="header">
+      <div> PATH TO ₹</div>
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="/about-us">About</a>
+        <a href="/courses_offering">courses</a>
+        <a href="/contact-me">contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Student Guidance</h1>
+      <br>
+      <form action="/guidance" method="POST">
+        <div class="Input">
+            <input type="text" id="name" name="name" class="Input-text" placeholder="Your first name, e.g. Akshay">
+            <label for="name" class="Input-label">First Name</label>
+        </div>
+        <div class="Input">
+          <input type="number" id="grade10" name="grade10" class="Input-text" placeholder="Your 10th Grade %, e.g. 92">
+          <label for="grade10" class="Input-label">10th Grade %</label>
+        </div>
+        <div class="Input">
+        <input type="number" id="grade12" name="grade12" class="Input-text" placeholder="Your 12th Grade %, e.g. 88">
+        <label for="grade12" class="Input-label">12th Grade %</label>
+        </div>
+        <div class="btn-hover">
+          <input type="submit" value="Get Guidance" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

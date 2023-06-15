@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PATH TO ₹</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body id="course-body">
+    <header class="header">
+      <div>PATH TO ₹</div>
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/courses_offering">courses</a>
+        <a href="/contact-me">contact</a>
+      </nav>
+    </header>
+    <div class="course-main">
+      <div class="course-header">
+        <h1>{{course.symbol}}</h1>
+      </div>
+      <div class="content">
+        <h1>symbol</h1>
+        <p>{{course.name}}</p>
+        <h1 class="slide-in-top">Description</h1>
+        <p class="fade-in">{{course.description}}</p>
+        <h1 class="slide-in-top">Main Subjects</h1>
+        <ol id="subjects" class="fade-in"></ol>
+        <h1 class="slide-in-top">Average Fees</h1>
+        <p class="fade-in">{{course.description}}</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    // var main = { main };
+    // console.log(main)
+    var myArray = JSON.parse('{{ course.main_subject | tojson | safe }}');
+    for (i = 0; i < myArray.length; i++) {
+        document.getElementById("subjects").innerHTML += "<li>" + myArray[i] + "</li>";
+}
+  </script>
+</html>

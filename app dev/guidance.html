@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PATH TO ₹</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div>PATH TO ₹</div>
+        <nav class="navbar">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/courses_offering">courses</a>
+          <a href="/contact-me">contact</a>
+        </nav>
+    </header>
+
+    <div class="page2">
+            <p class="user-name"> welcome {{user_name}}! <br></p>
+            <p class="user-name2">{{ guidance_msg}}</p>
+            <div class="course-link">
+                <a href="/course/CSE">CSE</a>
+                <a href="/course/AIML">AIML</a>
+                <a href="/course/CS">CS</a>
+                <a href="/course/IOT">IOT</a>
+                <a href="/course/DS">DS</a>
+                <a href="/course/AR">AR</a>
+                <a href="course/VR">VR</a>
+                <a href="/course/IT">IT</a>
+                <a href="/course/LLB">LLB</a>
+                <a href="/course/MBBS">MBBS</a>
+                <a href="/course/FASHION DESIGNING">FASHION DESIGNING</a>
+                <a href="/course/HOTEL MANAGEMENT">HOTEL MANAGEMENT</a>
+            </div>
+    </div>
+</body>
+</html>
